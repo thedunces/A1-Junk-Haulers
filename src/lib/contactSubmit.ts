@@ -54,7 +54,7 @@ export async function submitContact(values: ContactFormValues): Promise<SubmitRe
 
   // Offline-friendly default: open the user's email client.
   const to =
-    (import.meta.env.VITE_CONTACT_EMAIL as string | undefined) ?? 'Mdchaulaway@gmail.com'
+    (import.meta.env.VITE_CONTACT_EMAIL as string | undefined) ?? 'Mike@a1haulaway.com'
   const subject = 'A1 Junk Haulers — New quote request'
   const body = [
     `Name: ${values.name}`,

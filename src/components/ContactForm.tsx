@@ -10,15 +10,18 @@ function isEmail(s: string) {
 function validate(v: ContactFormValues): Errors {
   const e: Errors = {}
   if (!v.name.trim()) e.name = 'Please enter your name.'
-  if (!v.email.trim() || !isEmail(v.email.trim())) e.email = 'Please enter a valid email.'
-  if (!v.message.trim() || v.message.trim().length < 10)
+  if (!v.email.trim() || !isEmail(v.email.trim())) {
+    e.email = 'Please enter a valid email.'
+  }
+  if (!v.message.trim() || v.message.trim().length < 10) {
     e.message = 'Please include a short message (at least 10 characters).'
+  }
   return e
 }
 
 export function ContactForm() {
   const contactPhone = '720-461-1218'
-  const contactEmail = 'Mdchaulaway@gmail.com'
+  const contactEmail = 'Mike@a1haulaway.com'
 
   const [values, setValues] = useState<ContactFormValues>({
     name: '',
