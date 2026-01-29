@@ -17,6 +17,9 @@ function validate(v: ContactFormValues): Errors {
 }
 
 export function ContactForm() {
+  const contactPhone = '720-461-1218'
+  const contactEmail = 'Mdchaulaway@gmail.com'
+
   const [values, setValues] = useState<ContactFormValues>({
     name: '',
     email: '',
@@ -29,11 +32,11 @@ export function ContactForm() {
   const [submitError, setSubmitError] = useState<string | null>(null)
 
   const helper = useMemo(() => {
-    const email = (import.meta.env.VITE_CONTACT_EMAIL as string | undefined) ?? 'a1junkhaulers@example.com'
+    const email = (import.meta.env.VITE_CONTACT_EMAIL as string | undefined) ?? contactEmail
     const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined
     if (endpoint) return 'We’ll send this directly and get back to you ASAP.'
     return `This opens your email app to message ${email}. You can change this via VITE_CONTACT_EMAIL.`
-  }, [])
+  }, [contactEmail])
 
   const onChange =
     (k: keyof ContactFormValues) => (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -68,6 +71,21 @@ export function ContactForm() {
   return (
     <div className="mx-auto max-w-2xl">
       <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_24px_90px_rgba(0,0,0,0.35)] sm:p-8">
+        <div className="mb-6 flex flex-col gap-2 rounded-2xl border border-white/10 bg-slate-950/30 px-4 py-3 text-xs text-slate-200 sm:flex-row sm:items-center sm:justify-between">
+          <div className="text-slate-300">Prefer to reach us directly?</div>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <a
+              className="font-semibold text-sky-300 hover:text-sky-200"
+              href={`tel:${contactPhone.replace(/[^0-9+]/g, '')}`}
+            >
+              Call/Text {contactPhone}
+            </a>
+            <a className="font-semibold text-sky-300 hover:text-sky-200" href={`mailto:${contactEmail}`}>
+              {contactEmail}
+            </a>
+          </div>
+        </div>
+
         <form onSubmit={onSubmit} className="space-y-5" noValidate>
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="block">

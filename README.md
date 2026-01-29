@@ -1,4 +1,76 @@
-# React + TypeScript + Vite
+# A1 Junk Haulers Landing Page
+
+Modern landing page built with React + TypeScript + Vite + Tailwind CSS, featuring a 3D carousel of before/after images.
+
+**Live site**: [a1haulaway.com](https://a1haulaway.com)
+
+## Tech Stack
+
+- **React 19** + **TypeScript**
+- **Vite** for fast builds
+- **Tailwind CSS v4** with custom animations
+- **Cloudflare Pages** for hosting
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+This site is deployed to **Cloudflare Pages** via GitHub integration.
+
+### Cloudflare Pages Setup
+
+1. **Connect Repository**:
+   - Cloudflare Dashboard → **Pages** → **Create a project**
+   - Connect your GitHub repo (`thedunces/A1-Junk-Haulers`)
+   - Select the repository
+
+2. **Build Settings**:
+   - **Framework preset**: Vite
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+   - **Root directory**: `/` (leave default)
+   - **Node version**: 20
+
+3. **Custom Domain**:
+   - After first deployment, go to **Custom domains**
+   - Add `a1haulaway.com` and `www.a1haulaway.com`
+   - Cloudflare will auto-configure DNS
+
+4. **Environment Variables** (optional):
+   - `VITE_CONTACT_EMAIL`: Override default contact email
+   - `VITE_CONTACT_ENDPOINT`: Use API endpoint instead of mailto
+
+### Manual Deployment
+
+```bash
+npm run build
+npx wrangler pages deploy dist
+```
+
+## Project Structure
+
+```
+src/
+├── components/       # React components
+│   ├── Hero.tsx
+│   ├── BeforeAfterCarousel3D.tsx
+│   ├── Services.tsx
+│   ├── ContactForm.tsx
+│   └── ...
+├── lib/             # Utilities
+│   ├── useInView.ts  # Scroll reveal hook
+│   └── contactSubmit.ts
+└── assets/          # Images (logo, before/after photos)
+```
+
+---
+
+## Original Template Notes
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

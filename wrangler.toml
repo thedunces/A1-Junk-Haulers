@@ -1,0 +1,8 @@
+# Cloudflare Pages configuration (optional - mainly for CLI usage)
+# Most configuration is done via Cloudflare Dashboard
+
+name = "a1-junk-haulers"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "a1-junk-haulers"
