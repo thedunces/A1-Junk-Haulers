@@ -41,7 +41,7 @@ export function Hero() {
           >
             <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200">
               <span className="h-2 w-2 rounded-full bg-sky-400" />
-              Same-day pickup • Upfront pricing • Fast cleanup
+              Denver, Colorado • Same-day pickup • Upfront pricing
             </p>
 
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl">
@@ -49,8 +49,8 @@ export function Hero() {
             </h1>
 
             <p className="mt-4 text-pretty text-base text-slate-300 sm:text-lg">
-              From single-item pickups to full property cleanouts, A1 Junk Haulers shows up on time,
-              loads quickly, and cleans up the area before we go.
+              Based in Denver, Colorado. From single-item pickups to full property cleanouts, we show
+              up on time, load quickly, and clean up the area before we go.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">

@@ -7,6 +7,7 @@ import { ContactForm } from './components/ContactForm'
 import { ContactSection } from './components/ContactSection'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
+import { LocationSection } from './components/LocationSection'
 import { Services } from './components/Services'
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
             ]}
           />
         </div>
+
+        <LocationSection />
 
         <ContactSection>
           <ContactForm />

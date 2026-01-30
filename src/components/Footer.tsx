@@ -22,7 +22,7 @@ export function Footer() {
             <div>
               <div className="text-sm font-semibold text-slate-50">Service area</div>
               <p className="mt-2 text-sm text-slate-300">
-                Add your city/region here. Same-day pickup available in many areas.
+                Denver, Colorado metro area. Same-day pickup available.
               </p>
             </div>
             <div>
