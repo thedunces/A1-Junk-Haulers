@@ -1,8 +1,7 @@
+import actionCrewDebris from '../assets/action-crew-debris.png'
+import actionCrewPanel from '../assets/action-crew-panel.png'
+import logo from '../assets/logo.png'
 import { useInView } from '../lib/useInView'
-
-const LOGO_URL = 'https://placehold.co/80x80/1e3a5f/94a3b8?text=A1'
-const ACTION1 = 'https://placehold.co/600x400/1e293b/64748b?text=Junk+Removal'
-const ACTION2 = 'https://placehold.co/600x360/1e293b/64748b?text=Clean+Up'
 
 export function Hero() {
   const { ref, inView } = useInView<HTMLDivElement>()
@@ -15,8 +14,7 @@ export function Hero() {
       <div className="mx-auto w-full max-w-6xl px-6 pt-8">
         <nav className="flex items-center justify-between">
           <a href="#" className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="A1 Junk Haulers logo" className="h-10 w-10 rounded-xl" />
-            <span className="text-sm font-semibold tracking-tight text-slate-100 sm:text-base">A1 Junk Haulers</span>
+            <img src={logo} alt="A1 Junk Haulers" className="h-10 w-auto max-w-[160px] object-contain" />
           </a>
           <a href="#contact" className="rounded-full bg-sky-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-sm transition hover:bg-sky-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">
             Get a quote
@@ -47,11 +45,11 @@ export function Hero() {
           <div className="relative">
             <div className="relative grid gap-4">
               <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_26px_120px_rgba(0,0,0,0.6)]">
-                <img src={ACTION2} alt="Junk hauling crew" className="h-[320px] w-full object-cover md:h-[360px]" loading="eager" />
+                <img src={actionCrewDebris} alt="A1 Junk Haulers crew clearing debris" className="h-[320px] w-full object-cover md:h-[360px]" loading="eager" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-                  <img src={ACTION1} alt="Junk removal" className="h-36 w-full object-cover sm:h-40" loading="lazy" />
+                  <img src={actionCrewPanel} alt="Crew moving large panels with A1 Junk Haulers truck" className="h-36 w-full object-cover sm:h-40" loading="lazy" />
                 </div>
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-4">
                   <div className="text-sm font-semibold text-slate-50">What we take</div>

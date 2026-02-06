@@ -1,4 +1,4 @@
-const LOGO_URL = 'https://placehold.co/80x80/1e3a5f/94a3b8?text=A1'
+import logo from '../assets/logo.png'
 
 export function Footer() {
   return (
@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
             <div className="flex items-center gap-3">
-              <img src={LOGO_URL} alt="A1 Junk Haulers logo" className="h-10 w-10 rounded-xl" />
+              <img src={logo} alt="A1 Junk Haulers logo" className="h-10 w-auto max-w-[140px] object-contain" />
               <div>
                 <div className="text-sm font-semibold text-slate-50">A1 Junk Haulers</div>
                 <div className="text-xs text-slate-400">Junk removal • Cleanouts • Hauling</div>

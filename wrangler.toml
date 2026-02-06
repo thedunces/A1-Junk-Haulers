@@ -1,0 +1,14 @@
+# Cloudflare Pages — A1 Junk Haulers
+# Deploy: npm run build && npx wrangler pages deploy dist
+# Docs: https://developers.cloudflare.com/pages/configuration/
+
+name = "a1-junk-haulers"
+compatibility_date = "2024-01-01"
+
+# Build output directory (used by `wrangler pages deploy dist` and by dashboard if linked)
+pages_build_output_dir = "dist"
+
+# Optional: env vars for production (or set in Cloudflare dashboard)
+# [env.production]
+# name = "a1-junk-haulers"
+# vars = { VITE_CONTACT_EMAIL = "Mike@a1haulaway.com" }

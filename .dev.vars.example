@@ -1,0 +1,6 @@
+# Copy to .dev.vars for local Wrangler dev (optional).
+# .dev.vars is gitignored — do not commit secrets.
+# Used by: wrangler pages dev dist
+
+# VITE_CONTACT_EMAIL=Mike@a1haulaway.com
+# VITE_CONTACT_ENDPOINT=https://your-form-endpoint.com

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pages:deploy": "npm run build && wrangler pages deploy dist",
+    "pages:dev": "wrangler pages dev dist"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -21,6 +23,7 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^4.0.0",
     "typescript": "~5.6.3",
-    "vite": "^6.0.3"
+    "vite": "^6.0.3",
+    "wrangler": "^3.91.0"
   }
 }
